@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -48,32 +47,26 @@ const Header = () => {
               to="/about"
               className="text-yoogray-700 hover:text-yooblue-500 transition-colors animated-underline py-1"
             >
-              About
+              About Us
             </Link>
-            <a
-              href="#team"
-              className="text-yoogray-700 hover:text-yooblue-500 transition-colors animated-underline py-1"
-            >
-              Team
-            </a>
-            <a
-              href="#investors"
+            <Link
+              to="/investors"
               className="text-yoogray-700 hover:text-yooblue-500 transition-colors animated-underline py-1"
             >
               Investors
-            </a>
-            <a
-              href="#developers"
+            </Link>
+            <Link
+              to="/developers"
               className="text-yoogray-700 hover:text-yooblue-500 transition-colors animated-underline py-1"
             >
               Developers
-            </a>
-            <a
-              href="#partners"
+            </Link>
+            <Link
+              to="/partners"
               className="text-yoogray-700 hover:text-yooblue-500 transition-colors animated-underline py-1"
             >
               Partners
-            </a>
+            </Link>
             <Button
               className="bg-yooblue-500 hover:bg-yooblue-600 text-white ml-4 px-6"
               size="sm"
@@ -101,36 +94,29 @@ const Header = () => {
                 className="text-yoogray-700 hover:text-yooblue-500 transition-colors py-2 border-b border-yoogray-100"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                About
+                About Us
               </Link>
-              <a
-                href="#team"
-                className="text-yoogray-700 hover:text-yooblue-500 transition-colors py-2 border-b border-yoogray-100"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Team
-              </a>
-              <a
-                href="#investors"
+              <Link
+                to="/investors"
                 className="text-yoogray-700 hover:text-yooblue-500 transition-colors py-2 border-b border-yoogray-100"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Investors
-              </a>
-              <a
-                href="#developers"
+              </Link>
+              <Link
+                to="/developers"
                 className="text-yoogray-700 hover:text-yooblue-500 transition-colors py-2 border-b border-yoogray-100"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Developers
-              </a>
-              <a
-                href="#partners"
+              </Link>
+              <Link
+                to="/partners"
                 className="text-yoogray-700 hover:text-yooblue-500 transition-colors py-2 border-b border-yoogray-100"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Partners
-              </a>
+              </Link>
               <Button
                 className="bg-yooblue-500 hover:bg-yooblue-600 text-white w-full mt-2"
                 onClick={() => setMobileMenuOpen(false)}
