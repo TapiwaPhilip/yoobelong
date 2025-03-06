@@ -7,6 +7,7 @@ import FoundingTeam from "@/components/FoundingTeam";
 import InvestorSection from "@/components/InvestorSection";
 import DeveloperSection from "@/components/DeveloperSection";
 import PartnerSection from "@/components/PartnerSection";
+import AddressingYoungSeniors from "@/components/AddressingYoungSeniors";
 
 const Index = () => {
   useEffect(() => {
@@ -45,6 +46,7 @@ const Index = () => {
       <Header />
       <main>
         <HomeHero />
+        <AddressingYoungSeniors />
         <InvestorSection />
         <DeveloperSection />
         <PartnerSection />
@@ -56,4 +58,3 @@ const Index = () => {
 };
 
 export default Index;
-
