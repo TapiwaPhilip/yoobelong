@@ -1,7 +1,7 @@
+
 import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import FoundingTeam from "@/components/FoundingTeam";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, Activity, Building, HeartHandshake, GraduationCap, MapPin } from "lucide-react";
 
@@ -22,8 +22,8 @@ const AboutUs = () => {
           <div className="absolute inset-0 z-0">
             <div className="absolute inset-0 bg-yoogray-900/30 z-10" />
             <img
-              src="https://images.unsplash.com/photo-1573056019137-d19f15769404?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"
-              alt="Senior community enjoying life together"
+              src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"
+              alt="Senior community living"
               className="w-full h-full object-cover"
             />
           </div>
@@ -210,7 +210,6 @@ const AboutUs = () => {
         </section>
       </main>
       <Footer />
-      <FoundingTeam />
     </div>
   );
 };
