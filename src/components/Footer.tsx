@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Mail, Phone, MapPin, Instagram, Linkedin, Twitter } from "lucide-react";
@@ -58,10 +57,10 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/communities"
+                  to="/developers"
                   className="text-yoogray-400 hover:text-white transition-colors"
                 >
-                  Our Communities
+                  Developers
                 </Link>
               </li>
               <li>
@@ -81,12 +80,12 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/partners"
                   className="text-yoogray-400 hover:text-white transition-colors"
                 >
-                  Blog
-                </a>
+                  Partners
+                </Link>
               </li>
             </ul>
           </div>
