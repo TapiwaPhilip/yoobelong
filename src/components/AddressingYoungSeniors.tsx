@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Building, Home, KeyRound, LineChart, HandCoins, Users } from "lucide-react";
+import { Building, Rocket, HeartHandshake, LineChart, HandCoins, Users } from "lucide-react";
 
 const AddressingYoungSeniors = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -77,7 +77,7 @@ const AddressingYoungSeniors = () => {
             <div className="h-2 bg-yooblue-500" />
             <CardContent className="pt-6">
               <div className="mb-4 inline-flex p-3 rounded-full bg-yooblue-100">
-                <Home className="h-7 w-7 text-yooblue-700" />
+                <Rocket className="h-7 w-7 text-yooblue-700" />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-yoogray-900">New Builds</h3>
               <p className="text-yoogray-600 mb-4">
@@ -106,7 +106,7 @@ const AddressingYoungSeniors = () => {
             <div className="h-2 bg-yooblue-600" />
             <CardContent className="pt-6">
               <div className="mb-4 inline-flex p-3 rounded-full bg-yooblue-100">
-                <KeyRound className="h-7 w-7 text-yooblue-700" />
+                <HeartHandshake className="h-7 w-7 text-yooblue-700" />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-yoogray-900">Standing Asset Conversion</h3>
               <p className="text-yoogray-600 mb-4">
