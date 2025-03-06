@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Mail, Phone, MapPin, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -48,36 +49,36 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-4">
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/about"
                   className="text-yoogray-400 hover:text-white transition-colors"
                 >
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/communities"
                   className="text-yoogray-400 hover:text-white transition-colors"
                 >
                   Our Communities
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/investors"
                   className="text-yoogray-400 hover:text-white transition-colors"
                 >
                   Investor Relations
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/careers"
                   className="text-yoogray-400 hover:text-white transition-colors"
                 >
                   Careers
-                </a>
+                </Link>
               </li>
               <li>
                 <a
