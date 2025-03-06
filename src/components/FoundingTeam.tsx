@@ -10,13 +10,13 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   {
-    name: "Anna Schmidt",
+    name: "Jil G",
     role: "Founder & CEO",
     bio: "With over 20 years of experience in real estate and community building, Anna founded YOOBELONG to create meaningful spaces where seniors can thrive together.",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
   },
   {
-    name: "Thomas Müller",
+    name: "Marko M",
     role: "Co-Founder & COO",
     bio: "Thomas brings his expertise in operations and community engagement to ensure every YOOBELONG space fosters genuine connections and support.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
