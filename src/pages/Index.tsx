@@ -45,10 +45,10 @@ const Index = () => {
       <Header />
       <main>
         <HomeHero />
-        <FoundingTeam />
         <InvestorSection />
         <DeveloperSection />
         <PartnerSection />
+        <FoundingTeam />
       </main>
       <Footer />
     </div>
@@ -56,3 +56,4 @@ const Index = () => {
 };
 
 export default Index;
+
