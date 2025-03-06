@@ -14,10 +14,10 @@ const HomeHero = () => {
     <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-yoogray-900/30 z-10" />
+        <div className="absolute inset-0 bg-yoogray-900/40 z-10" />
         <img
-          src="https://images.unsplash.com/photo-1524069290683-0457abfe42c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"
-          alt="Happy seniors enjoying life together"
+          src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"
+          alt="Seniors having fun together"
           className="w-full h-full object-cover object-center"
         />
       </div>
