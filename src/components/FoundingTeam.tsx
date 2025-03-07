@@ -16,9 +16,9 @@ const teamMembers: TeamMember[] = [
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
   },
   {
-    name: "Marko M",
+    name: "Marco",
     role: "Co-Founder & COO",
-    bio: "Thomas brings his expertise in operations and community engagement to ensure every YOOBELONG space fosters genuine connections and support.",
+    bio: "Marco brings his expertise in operations and community engagement to ensure every YOOBELONG space fosters genuine connections and support.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
   },
   {
