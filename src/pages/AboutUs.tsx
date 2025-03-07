@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FoundingTeam from "@/components/FoundingTeam";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, Activity, Building, HeartHandshake, GraduationCap, MapPin } from "lucide-react";
 
@@ -79,6 +80,9 @@ const AboutUs = () => {
             </div>
           </div>
         </section>
+
+        {/* Founding Team Section */}
+        <FoundingTeam />
 
         {/* Key Features Section */}
         <section className="py-16 md:py-24 bg-yooblue-50">
