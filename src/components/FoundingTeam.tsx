@@ -10,9 +10,9 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   {
-    name: "Jil G",
+    name: "Dr. Jil Gunsenheimer",
     role: "Founder & CEO",
-    bio: "With over 20 years of experience in real estate and community building, Anna founded YOOBELONG to create meaningful spaces where seniors can thrive together.",
+    bio: "With over 20 years of experience in real estate and community building, Dr. Jil Gunsenheimer founded YOOBELONG to create meaningful spaces where young seniors can thrive together.",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
   },
   {
