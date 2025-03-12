@@ -1,30 +1,22 @@
-
 import React, { useEffect, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Building, Rocket, HeartHandshake, LineChart, HandCoins, Users } from "lucide-react";
-
 const AddressingYoungSeniors = () => {
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
+    const observer = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) {
+        setIsVisible(true);
+      }
+    }, {
+      threshold: 0.1
+    });
     observer.observe(document.querySelector("#addressing-young-seniors")!);
-
     return () => {
       observer.disconnect();
     };
   }, []);
-
-  return (
-    <section id="addressing-young-seniors" className="py-24 relative overflow-hidden bg-gradient-to-b from-white to-yoogray-50">
+  return <section id="addressing-young-seniors" className="py-24 relative overflow-hidden bg-gradient-to-b from-white to-yoogray-50">
       {/* Abstract background elements */}
       <div className="absolute inset-0 overflow-hidden opacity-10 pointer-events-none">
         <div className="absolute top-20 -left-24 w-96 h-96 rounded-full bg-yooblue-300 blur-3xl" />
@@ -34,9 +26,7 @@ const AddressingYoungSeniors = () => {
       </div>
 
       <div className="container-section relative z-10">
-        <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ease-out ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}>
+        <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <span className="inline-block px-4 py-1.5 text-sm font-medium rounded-full bg-yooblue-100 text-yooblue-800 mb-4 shadow-sm">
             Our Approach
           </span>
@@ -51,11 +41,9 @@ const AddressingYoungSeniors = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative bg-sky-400">
           {/* Card 1 */}
-          <div className={`transition-all duration-1000 ease-out delay-100 transform ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}>
+          <div className={`transition-all duration-1000 ease-out delay-100 transform ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
             <Card className="relative group border-none bg-white/80 backdrop-blur-sm shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 h-full">
               <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-yooblue-400 to-yooblue-500" />
               <div className="absolute -right-20 -top-20 w-40 h-40 rounded-full bg-yooblue-100/30 group-hover:bg-yooblue-100/50 transition-all duration-300" />
@@ -87,9 +75,7 @@ const AddressingYoungSeniors = () => {
           </div>
 
           {/* Card 2 */}
-          <div className={`transition-all duration-1000 ease-out delay-200 transform ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}>
+          <div className={`transition-all duration-1000 ease-out delay-200 transform ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
             <Card className="relative group border-none bg-white/80 backdrop-blur-sm shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 h-full">
               <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-yooblue-500 to-yooblue-600" />
               <div className="absolute -right-20 -top-20 w-40 h-40 rounded-full bg-yooblue-100/30 group-hover:bg-yooblue-100/50 transition-all duration-300" />
@@ -121,9 +107,7 @@ const AddressingYoungSeniors = () => {
           </div>
 
           {/* Card 3 */}
-          <div className={`transition-all duration-1000 ease-out delay-300 transform ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}>
+          <div className={`transition-all duration-1000 ease-out delay-300 transform ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
             <Card className="relative group border-none bg-white/80 backdrop-blur-sm shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 h-full">
               <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-yooblue-600 to-yooblue-700" />
               <div className="absolute -right-20 -top-20 w-40 h-40 rounded-full bg-yooblue-100/30 group-hover:bg-yooblue-100/50 transition-all duration-300" />
@@ -155,9 +139,7 @@ const AddressingYoungSeniors = () => {
           </div>
         </div>
 
-        <div className={`max-w-3xl mx-auto text-center mt-16 transition-all duration-1000 ease-out delay-400 ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}>
+        <div className={`max-w-3xl mx-auto text-center mt-16 transition-all duration-1000 ease-out delay-400 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <div className="glassmorphism bg-white/70 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-yoogray-100">
             <p className="text-xl text-yoogray-700 italic leading-relaxed">
               "By combining expertise in real estate and community-building, we create high-value opportunities for investors while shaping the future of senior living."
@@ -165,8 +147,6 @@ const AddressingYoungSeniors = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AddressingYoungSeniors;
