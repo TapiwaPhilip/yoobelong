@@ -16,7 +16,7 @@ const teamMembers: TeamMember[] = [
     name: "Dr. Jil C. Gunsenheimer",
     role: "Founder & CEO",
     bio: "With over 20 years of experience in real estate and community building, Dr. Jil C. Gunsenheimer founded YOOBELONG to create meaningful spaces where young seniors can thrive together.",
-    image: "/lovable-uploads/a9851e6a-8a29-4691-a9b1-ccafafffe580.png",
+    image: "/lovable-uploads/9e037f15-7d24-4ff0-9d1e-8967b8036ee9.png",
     icon: "crown",
     color: "from-pink-500 to-orange-400",
   },
@@ -24,7 +24,7 @@ const teamMembers: TeamMember[] = [
     name: "Marco Schreiber",
     role: "Managing Director",
     bio: "Marco brings his expertise in operations and community engagement to ensure every YOOBELONG space fosters genuine connections and support.",
-    image: "/lovable-uploads/a9851e6a-8a29-4691-a9b1-ccafafffe580.png",
+    image: "/lovable-uploads/9e037f15-7d24-4ff0-9d1e-8967b8036ee9.png",
     icon: "sparkles",
     color: "from-violet-500 to-purple-400",
   },
@@ -32,7 +32,7 @@ const teamMembers: TeamMember[] = [
     name: "Annika Brinkmann",
     role: "Digital Accessibility Expert",
     bio: "As our Digital Accessibility Expert lead, Annika designs spaces that balance privacy with community, creating environments that adapt to the changing needs of our residents.",
-    image: "/lovable-uploads/a9851e6a-8a29-4691-a9b1-ccafafffe580.png",
+    image: "/lovable-uploads/9e037f15-7d24-4ff0-9d1e-8967b8036ee9.png",
     icon: "lightbulb",
     color: "from-cyan-500 to-blue-400",
   },
@@ -40,7 +40,7 @@ const teamMembers: TeamMember[] = [
     name: "Michael Becker",
     role: "Community Director",
     bio: "Michael focuses on developing meaningful community programs and activities that create lasting bonds between residents and local neighborhoods.",
-    image: "/lovable-uploads/a9851e6a-8a29-4691-a9b1-ccafafffe580.png",
+    image: "/lovable-uploads/9e037f15-7d24-4ff0-9d1e-8967b8036ee9.png",
     icon: "users",
     color: "from-green-500 to-emerald-400",
   },
@@ -138,8 +138,7 @@ const FoundingTeam = () => {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-contain z-20"
-                    style={{ objectFit: "cover", width: "100%", height: "100%" }}
+                    className="w-full object-contain z-20"
                   />
                   
                   {/* Icon badge */}
