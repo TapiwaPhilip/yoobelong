@@ -90,7 +90,12 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-sans scroll-smooth;
+  }
+  
+  /* Improve focus styles for better accessibility */
+  :focus-visible {
+    @apply outline-none ring-2 ring-yooblue-500 ring-offset-2;
   }
 }
 
@@ -112,7 +117,7 @@
   }
 
   .cta-button {
-    @apply rounded-lg bg-yooblue-500 px-5 py-3 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-yooblue-600 focus:outline-none focus:ring-2 focus:ring-yooblue-400 focus:ring-offset-2;
+    @apply rounded-lg bg-yooblue-500 px-5 py-3 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-yooblue-600 focus:outline-none focus:ring-2 focus:ring-yooblue-400 focus:ring-offset-2 shadow-md hover:shadow-lg;
   }
 
   .section-heading {
@@ -125,5 +130,22 @@
 
   .image-loading {
     @apply bg-yoogray-200 animate-image-loading-pulse rounded-lg;
+  }
+  
+  /* New utility classes */
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+  
+  .card-highlight {
+    @apply border border-transparent hover:border-yooblue-200 transition-all duration-300 hover:shadow-md;
+  }
+  
+  .section-divider {
+    @apply w-24 h-1 bg-yooblue-500 rounded-full mx-auto my-8;
+  }
+  
+  .frost-glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/30 shadow-sm;
   }
 }

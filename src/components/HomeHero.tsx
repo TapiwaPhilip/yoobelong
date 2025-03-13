@@ -23,7 +23,7 @@ const HomeHero = () => {
     <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-yoogray-900/40 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-yoogray-900/80 to-yoogray-900/40 z-10" />
         <img
           src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"
           alt="Seniors having fun together"
@@ -45,16 +45,16 @@ const HomeHero = () => {
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               Creating Vibrant Communities
-              <span className="block">Where You Truly Belong</span>
+              <span className="block text-gradient-blue">Where You Truly Belong</span>
             </h1>
-            <p className="text-lg md:text-xl text-white/90 mb-8 max-w-3xl">
+            <p className="text-lg md:text-xl text-white/90 mb-8 max-w-3xl backdrop-blur-sm bg-yoogray-900/10 p-4 rounded-lg">
               YOOBELONG creates dynamic local communities centered on shared
               services, activities, and events designed specifically for young
               seniors in Germany.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
-                className="bg-yooblue-500 hover:bg-yooblue-600 text-white rounded-lg px-6 py-6 text-lg"
+                className="bg-yooblue-500 hover:bg-yooblue-600 text-white rounded-lg px-6 py-6 text-lg shadow-lg transition-all hover:scale-105"
                 size="lg"
                 onClick={() => setIsContactOpen(true)}
               >

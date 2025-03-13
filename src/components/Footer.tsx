@@ -3,16 +3,38 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { toast } from "sonner";
 
 const Footer = () => {
   const year = new Date().getFullYear();
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!email || !email.includes('@')) {
+      toast.error("Please enter a valid email address");
+      return;
+    }
+    
+    setIsSubmitting(true);
+    
+    // Simulating API call
+    setTimeout(() => {
+      toast.success("Thank you for subscribing to our newsletter!");
+      setEmail("");
+      setIsSubmitting(false);
+    }, 1000);
+  };
 
   return (
     <footer className="bg-yoogray-900 text-white pt-16 pb-8">
       <div className="container-section !py-0">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div className="space-y-6">
-            <div className="bg-yooblue-500 p-3 inline-block rounded-lg">
+            <div className="bg-yooblue-500 p-3 inline-block rounded-lg shadow-md">
               <img 
                 src="/lovable-uploads/9e037f15-7d24-4ff0-9d1e-8967b8036ee9.png" 
                 alt="YOOBELONG" 
@@ -28,7 +50,7 @@ const Footer = () => {
                 href="https://www.linkedin.com/company/yoobelong/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-yoogray-800 flex items-center justify-center text-white hover:bg-yooblue-500 transition-colors"
+                className="w-10 h-10 rounded-full bg-yoogray-800 flex items-center justify-center text-white hover:bg-yooblue-500 transition-colors hover:scale-110 transform duration-200"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={18} />
@@ -37,45 +59,50 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-6 text-white/90">Quick Links</h3>
             <ul className="space-y-4">
               <li>
                 <Link
                   to="/about"
-                  className="text-yoogray-400 hover:text-white transition-colors"
+                  className="text-yoogray-400 hover:text-white transition-colors flex items-center group"
                 >
+                  <span className="h-0.5 w-0 bg-yooblue-500 mr-0 group-hover:w-3 group-hover:mr-2 transition-all duration-300"></span>
                   About Us
                 </Link>
               </li>
               <li>
                 <Link
                   to="/developers"
-                  className="text-yoogray-400 hover:text-white transition-colors"
+                  className="text-yoogray-400 hover:text-white transition-colors flex items-center group"
                 >
+                  <span className="h-0.5 w-0 bg-yooblue-500 mr-0 group-hover:w-3 group-hover:mr-2 transition-all duration-300"></span>
                   Developers
                 </Link>
               </li>
               <li>
                 <Link
                   to="/investors"
-                  className="text-yoogray-400 hover:text-white transition-colors"
+                  className="text-yoogray-400 hover:text-white transition-colors flex items-center group"
                 >
+                  <span className="h-0.5 w-0 bg-yooblue-500 mr-0 group-hover:w-3 group-hover:mr-2 transition-all duration-300"></span>
                   Investors
                 </Link>
               </li>
               <li>
                 <Link
                   to="/careers"
-                  className="text-yoogray-400 hover:text-white transition-colors"
+                  className="text-yoogray-400 hover:text-white transition-colors flex items-center group"
                 >
+                  <span className="h-0.5 w-0 bg-yooblue-500 mr-0 group-hover:w-3 group-hover:mr-2 transition-all duration-300"></span>
                   Careers
                 </Link>
               </li>
               <li>
                 <Link
                   to="/partners"
-                  className="text-yoogray-400 hover:text-white transition-colors"
+                  className="text-yoogray-400 hover:text-white transition-colors flex items-center group"
                 >
+                  <span className="h-0.5 w-0 bg-yooblue-500 mr-0 group-hover:w-3 group-hover:mr-2 transition-all duration-300"></span>
                   Partners
                 </Link>
               </li>
@@ -83,40 +110,47 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-6">Contact Us</h3>
+            <h3 className="text-lg font-semibold mb-6 text-white/90">Contact Us</h3>
             <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-yoogray-400">
-                <MapPin size={20} className="flex-shrink-0 mt-1" />
+              <li className="flex items-start gap-3 text-yoogray-400 group hover:text-white transition-colors">
+                <MapPin size={20} className="flex-shrink-0 mt-1 text-yooblue-400 group-hover:text-yooblue-300" />
                 <span>
                   Kurfürstendamm 194,
                   <br />
                   10707 Berlin, Germany
                 </span>
               </li>
-              <li className="flex items-center gap-3 text-yoogray-400">
-                <Phone size={20} />
+              <li className="flex items-center gap-3 text-yoogray-400 group hover:text-white transition-colors">
+                <Phone size={20} className="text-yooblue-400 group-hover:text-yooblue-300" />
                 <span>+49 (0) 30 1234567</span>
               </li>
-              <li className="flex items-center gap-3 text-yoogray-400">
-                <Mail size={20} />
+              <li className="flex items-center gap-3 text-yoogray-400 group hover:text-white transition-colors">
+                <Mail size={20} className="text-yooblue-400 group-hover:text-yooblue-300" />
                 <span>info@yoobelong.com</span>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-6">Newsletter</h3>
+            <h3 className="text-lg font-semibold mb-6 text-white/90">Newsletter</h3>
             <p className="text-yoogray-400 text-sm mb-4">
               Stay updated with our latest news and community developments.
             </p>
-            <form className="space-y-3">
+            <form className="space-y-3" onSubmit={handleSubscribe}>
               <Input
                 type="email"
                 placeholder="Your email address"
-                className="bg-yoogray-800 border-yoogray-700 text-white placeholder:text-yoogray-500"
+                className="bg-yoogray-800 border-yoogray-700 text-white placeholder:text-yoogray-500 focus:border-yooblue-400 focus:ring-yooblue-400/20"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
               />
-              <Button className="w-full bg-yooblue-500 hover:bg-yooblue-600">
-                Subscribe
+              <Button 
+                className="w-full bg-yooblue-500 hover:bg-yooblue-600 transition-all duration-300"
+                type="submit"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Subscribing..." : "Subscribe"}
               </Button>
             </form>
           </div>
