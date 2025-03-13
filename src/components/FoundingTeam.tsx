@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { Sparkles, Crown, Lightbulb, Users } from "lucide-react";
 
@@ -13,25 +12,25 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   {
-    name: "Dr. Jil Gunsenheimer",
+    name: "Dr. Jil C. Gunsenheimer",
     role: "Founder & CEO",
-    bio: "With over 20 years of experience in real estate and community building, Dr. Jil Gunsenheimer founded YOOBELONG to create meaningful spaces where young seniors can thrive together.",
+    bio: "With over 20 years of experience in real estate and community building, Dr. Jil C. Gunsenheimer founded YOOBELONG to create meaningful spaces where young seniors can thrive together.",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     icon: "crown",
     color: "from-pink-500 to-orange-400",
   },
   {
-    name: "Marco",
-    role: "Co-Founder & COO",
+    name: "Marco Schreiber",
+    role: "Managing Director",
     bio: "Marco brings his expertise in operations and community engagement to ensure every YOOBELONG space fosters genuine connections and support.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     icon: "sparkles",
     color: "from-violet-500 to-purple-400",
   },
   {
-    name: "Sophia Weber",
-    role: "Chief Architect",
-    bio: "As our lead architect, Sophia designs spaces that balance privacy with community, creating environments that adapt to the changing needs of our residents.",
+    name: "Annika Brinkmann",
+    role: "Digital Accessibility Expert",
+    bio: "As our Digital Accessibility Expert lead, Annika designs spaces that balance privacy with community, creating environments that adapt to the changing needs of our residents.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     icon: "lightbulb",
     color: "from-cyan-500 to-blue-400",
