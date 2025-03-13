@@ -36,7 +36,7 @@ const Footer = () => {
           <div className="space-y-6">
             <div className="bg-yooblue-500 p-3 inline-block rounded-lg shadow-md">
               <img 
-                src="/lovable-uploads/9e037f15-7d24-4ff0-9d1e-8967b8036ee9.png" 
+                src="/lovable-uploads/a9851e6a-8a29-4691-a9b1-ccafafffe580.png" 
                 alt="YOOBELONG" 
                 className="h-8"
               />
