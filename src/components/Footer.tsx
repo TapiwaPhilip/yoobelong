@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Mail, Phone, MapPin, Instagram, Linkedin, Twitter } from "lucide-react";
@@ -11,10 +12,13 @@ const Footer = () => {
       <div className="container-section !py-0">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div className="space-y-6">
-            <h2 className="text-2xl font-bold">
-              <span className="text-yooblue-400">YOO</span>
-              <span>BELONG</span>
-            </h2>
+            <div className="bg-yooblue-500 p-3 inline-block rounded-lg">
+              <img 
+                src="/lovable-uploads/9e037f15-7d24-4ff0-9d1e-8967b8036ee9.png" 
+                alt="YOOBELONG" 
+                className="h-8"
+              />
+            </div>
             <p className="text-yoogray-400 text-sm">
               Creating vibrant communities where young seniors truly belong.
               Join us in reshaping how we live, connect, and thrive together.

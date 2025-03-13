@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -35,10 +36,11 @@ const Header = () => {
       <div className="container-section !py-0">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
-            <span className="text-2xl font-bold text-yooblue-500">
-              <span>YOO</span>
-              <span className="text-yoogray-800">BELONG</span>
-            </span>
+            <img 
+              src="/lovable-uploads/9e037f15-7d24-4ff0-9d1e-8967b8036ee9.png" 
+              alt="YOOBELONG" 
+              className="h-8 md:h-10" 
+            />
           </Link>
 
           {/* Desktop Navigation */}

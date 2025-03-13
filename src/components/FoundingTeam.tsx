@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { Sparkles, Crown, Lightbulb, Users } from "lucide-react";
 
@@ -15,7 +16,7 @@ const teamMembers: TeamMember[] = [
     name: "Dr. Jil C. Gunsenheimer",
     role: "Founder & CEO",
     bio: "With over 20 years of experience in real estate and community building, Dr. Jil C. Gunsenheimer founded YOOBELONG to create meaningful spaces where young seniors can thrive together.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    image: "/lovable-uploads/9e037f15-7d24-4ff0-9d1e-8967b8036ee9.png",
     icon: "crown",
     color: "from-pink-500 to-orange-400",
   },
@@ -23,7 +24,7 @@ const teamMembers: TeamMember[] = [
     name: "Marco Schreiber",
     role: "Managing Director",
     bio: "Marco brings his expertise in operations and community engagement to ensure every YOOBELONG space fosters genuine connections and support.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    image: "/lovable-uploads/9e037f15-7d24-4ff0-9d1e-8967b8036ee9.png",
     icon: "sparkles",
     color: "from-violet-500 to-purple-400",
   },
@@ -31,7 +32,7 @@ const teamMembers: TeamMember[] = [
     name: "Annika Brinkmann",
     role: "Digital Accessibility Expert",
     bio: "As our Digital Accessibility Expert lead, Annika designs spaces that balance privacy with community, creating environments that adapt to the changing needs of our residents.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    image: "/lovable-uploads/9e037f15-7d24-4ff0-9d1e-8967b8036ee9.png",
     icon: "lightbulb",
     color: "from-cyan-500 to-blue-400",
   },
@@ -39,7 +40,7 @@ const teamMembers: TeamMember[] = [
     name: "Michael Becker",
     role: "Community Director",
     bio: "Michael focuses on developing meaningful community programs and activities that create lasting bonds between residents and local neighborhoods.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    image: "/lovable-uploads/9e037f15-7d24-4ff0-9d1e-8967b8036ee9.png",
     icon: "users",
     color: "from-green-500 to-emerald-400",
   },
@@ -132,12 +133,12 @@ const FoundingTeam = () => {
               
               {/* Card content with glassmorphism effect */}
               <div className="relative bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl overflow-hidden h-full transition-all duration-300 shadow-lg hover:shadow-xl">
-                <div className="relative aspect-square overflow-hidden">
+                <div className="relative aspect-square overflow-hidden bg-yooblue-500 flex items-center justify-center p-6">
                   <div className={`absolute inset-0 bg-gradient-to-br ${member.color} opacity-30 z-10`} />
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                    className="w-full object-contain z-20"
                   />
                   
                   {/* Icon badge */}
