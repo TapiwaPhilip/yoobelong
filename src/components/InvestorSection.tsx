@@ -2,6 +2,14 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { HandshakeIcon, Briefcase, TrendingUp, LineChart } from "lucide-react";
+import { 
+  Dialog, 
+  DialogContent, 
+  DialogHeader,
+  DialogTitle,
+  DialogDescription
+} from "@/components/ui/dialog";
+import ContactForm from "@/components/ContactForm";
 
 interface BenefitProps {
   icon: React.ReactNode;
@@ -25,6 +33,7 @@ const Benefit = ({ icon, title, description }: BenefitProps) => {
 
 const InvestorSection = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -88,6 +97,7 @@ const InvestorSection = () => {
             <Button
               className="bg-yooblue-500 hover:bg-yooblue-600 text-white rounded-lg px-6 py-6 text-lg w-full sm:w-auto"
               size="lg"
+              onClick={() => setIsContactOpen(true)}
             >
               Request Investment Information
             </Button>
@@ -121,6 +131,19 @@ const InvestorSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Contact Dialog */}
+      <Dialog open={isContactOpen} onOpenChange={setIsContactOpen}>
+        <DialogContent className="sm:max-w-[500px]">
+          <DialogHeader>
+            <DialogTitle className="text-xl font-bold text-gray-800">Investment Inquiries</DialogTitle>
+            <DialogDescription className="text-gray-600">
+              Interested in investment opportunities? Fill out the form below and our investment team will contact you.
+            </DialogDescription>
+          </DialogHeader>
+          <ContactForm onSuccess={() => setIsContactOpen(false)} />
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };

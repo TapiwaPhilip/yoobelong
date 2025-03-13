@@ -2,9 +2,19 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Heart, Globe, Handshake } from "lucide-react";
+import { Link } from "react-router-dom";
+import { 
+  Dialog, 
+  DialogContent, 
+  DialogHeader,
+  DialogTitle,
+  DialogDescription
+} from "@/components/ui/dialog";
+import ContactForm from "@/components/ContactForm";
 
 const PartnerSection = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -113,8 +123,11 @@ const PartnerSection = () => {
                       <Button
                         variant="outline"
                         className="border-yooblue-500 text-yooblue-500 hover:bg-yooblue-50"
+                        asChild
                       >
-                        Learn More
+                        <Link to="/partners">
+                          Learn More
+                        </Link>
                       </Button>
                     </div>
                   </div>
@@ -134,6 +147,7 @@ const PartnerSection = () => {
                 </p>
                 <Button
                   className="bg-white text-yooblue-600 hover:bg-yoogray-100"
+                  onClick={() => setIsContactOpen(true)}
                 >
                   Contact Partnership Team
                 </Button>
@@ -142,6 +156,19 @@ const PartnerSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Contact Dialog */}
+      <Dialog open={isContactOpen} onOpenChange={setIsContactOpen}>
+        <DialogContent className="sm:max-w-[500px]">
+          <DialogHeader>
+            <DialogTitle className="text-xl font-bold text-gray-800">Partnership Inquiries</DialogTitle>
+            <DialogDescription className="text-gray-600">
+              Interested in partnership opportunities? Fill out the form below and our partnerships team will contact you.
+            </DialogDescription>
+          </DialogHeader>
+          <ContactForm onSuccess={() => setIsContactOpen(false)} />
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };

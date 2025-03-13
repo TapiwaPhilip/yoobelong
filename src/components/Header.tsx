@@ -3,10 +3,13 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import ContactForm from "@/components/ContactForm";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,6 +75,7 @@ const Header = () => {
             <Button
               className="bg-yooblue-500 hover:bg-yooblue-600 text-white ml-4 px-6"
               size="sm"
+              onClick={() => setIsContactOpen(true)}
             >
               Contact Us
             </Button>
@@ -121,7 +125,10 @@ const Header = () => {
               </Link>
               <Button
                 className="bg-yooblue-500 hover:bg-yooblue-600 text-white w-full mt-2"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  setIsContactOpen(true);
+                }}
               >
                 Contact Us
               </Button>
@@ -129,6 +136,19 @@ const Header = () => {
           </div>
         )}
       </div>
+
+      {/* Contact Dialog */}
+      <Dialog open={isContactOpen} onOpenChange={setIsContactOpen}>
+        <DialogContent className="sm:max-w-[500px]">
+          <DialogHeader>
+            <DialogTitle className="text-xl font-bold text-gray-800">Contact Us</DialogTitle>
+            <DialogDescription className="text-gray-600">
+              We'd love to hear from you! Fill out the form below and we'll get back to you soon.
+            </DialogDescription>
+          </DialogHeader>
+          <ContactForm onSuccess={() => setIsContactOpen(false)} />
+        </DialogContent>
+      </Dialog>
     </header>
   );
 };

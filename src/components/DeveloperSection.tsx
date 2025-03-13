@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Building, Key, MapPin, Users } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const DeveloperSection = () => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -177,8 +178,11 @@ const DeveloperSection = () => {
               </p>
               <Button
                 className="bg-yooblue-500 hover:bg-yooblue-600 text-white w-full"
+                asChild
               >
-                Explore Partnership Opportunities
+                <Link to="/developers">
+                  Explore Partnership Opportunities
+                </Link>
               </Button>
             </div>
           </div>
