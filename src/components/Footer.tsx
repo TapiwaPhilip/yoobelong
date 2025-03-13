@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Mail, Phone, MapPin, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -25,25 +25,13 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-yoogray-800 flex items-center justify-center text-white hover:bg-yooblue-500 transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram size={18} />
-              </a>
-              <a
-                href="#"
+                href="https://www.linkedin.com/company/yoobelong/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-yoogray-800 flex items-center justify-center text-white hover:bg-yooblue-500 transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={18} />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-yoogray-800 flex items-center justify-center text-white hover:bg-yooblue-500 transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter size={18} />
               </a>
             </div>
           </div>
@@ -72,7 +60,7 @@ const Footer = () => {
                   to="/investors"
                   className="text-yoogray-400 hover:text-white transition-colors"
                 >
-                  Investor Relations
+                  Investors
                 </Link>
               </li>
               <li>
@@ -100,9 +88,9 @@ const Footer = () => {
               <li className="flex items-start gap-3 text-yoogray-400">
                 <MapPin size={20} className="flex-shrink-0 mt-1" />
                 <span>
-                  Friedrichstrasse 123,
+                  Kurfürstendamm 194,
                   <br />
-                  10117 Berlin, Germany
+                  10707 Berlin, Germany
                 </span>
               </li>
               <li className="flex items-center gap-3 text-yoogray-400">
