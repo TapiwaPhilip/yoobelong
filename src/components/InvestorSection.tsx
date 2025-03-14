@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { HandshakeIcon, Briefcase, TrendingUp, LineChart } from "lucide-react";
+import { HandshakeIcon, TrendingUp } from "lucide-react";
 import { 
   Dialog, 
   DialogContent, 
@@ -81,16 +81,6 @@ const InvestorSection = () => {
                 icon={<HandshakeIcon size={24} />}
                 title="Social Impact"
                 description="Make a meaningful difference in addressing the growing need for innovative senior living solutions."
-              />
-              <Benefit
-                icon={<Briefcase size={24} />}
-                title="Diversified Portfolio"
-                description="Add a resilient real estate investment with both property appreciation and community service revenue streams."
-              />
-              <Benefit
-                icon={<LineChart size={24} />}
-                title="Long-term Returns"
-                description="Benefit from stable, long-term cash flows supported by demographic trends and housing demand."
               />
             </div>
 
