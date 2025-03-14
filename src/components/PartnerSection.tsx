@@ -130,12 +130,23 @@ const PartnerSection = () => {
                 <p className="mb-6">
                   Contact our partnership team to discuss how we can collaborate to create better communities together.
                 </p>
-                <Button
-                  className="bg-white text-yooblue-600 hover:bg-yoogray-100"
-                  onClick={() => setIsContactOpen(true)}
-                >
-                  Contact Partnership Team
-                </Button>
+                <div className="flex flex-wrap gap-4">
+                  <Button
+                    className="bg-white text-yooblue-600 hover:bg-yoogray-100"
+                    onClick={() => setIsContactOpen(true)}
+                  >
+                    Contact Partnership Team
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="bg-transparent border-white text-white hover:bg-white/10"
+                    asChild
+                  >
+                    <Link to="/partners">
+                      Learn More
+                    </Link>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
