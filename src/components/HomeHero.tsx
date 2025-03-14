@@ -33,7 +33,7 @@ const HomeHero = () => {
           alt="Seniors having fun together"
           className="w-full h-full object-cover object-center"
           loading="eager"
-          fetchpriority="high"
+          fetchPriority="high"
         />
       </div>
 
