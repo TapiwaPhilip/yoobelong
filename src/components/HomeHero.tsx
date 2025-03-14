@@ -48,7 +48,7 @@ const HomeHero = () => {
                 size="lg" 
                 onClick={() => setIsContactOpen(true)}
               >
-                Get in touch
+                Contact Us Now
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>
