@@ -153,8 +153,8 @@ const DeveloperSection = () => {
                     <MapPin size={20} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-yoogray-900">Location Support</h4>
-                    <p className="text-sm text-yoogray-600">Strategic site selection</p>
+                    <h4 className="font-semibold text-yoogray-900">Vertical Investor Network</h4>
+                    <p className="text-sm text-yoogray-600">Access to investors with dedicated funds</p>
                   </div>
                 </div>
                 
@@ -163,8 +163,8 @@ const DeveloperSection = () => {
                     <Key size={20} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-yoogray-900">Turnkey Operation</h4>
-                    <p className="text-sm text-yoogray-600">Ongoing management services</p>
+                    <h4 className="font-semibold text-yoogray-900">Limited Upfront Investment</h4>
+                    <p className="text-sm text-yoogray-600">Limited smart common areas</p>
                   </div>
                 </div>
               </div>
