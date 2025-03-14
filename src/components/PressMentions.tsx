@@ -1,3 +1,4 @@
+
 import { useState, useEffect, useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -15,7 +16,7 @@ const pressArticles = [
   {
     id: 1,
     source: "IBTimes",
-    logo: "/lovable-uploads/9e037f15-7d24-4ff0-9d1e-8967b8036ee9.png",
+    logo: "/lovable-uploads/7d297830-a420-4abe-9c72-152ac26bd4ad.png",
     title: "Senior Living Redefined: How YOOBELONG is Shaping the Future of Vibrant, Active Communities for Seniors",
     description: "YOOBELONG is revolutionizing the senior living space through innovative community-focused solutions...",
     link: "https://www.ibtimes.co.uk/senior-living-redefined-how-yoobelong-shaping-future-vibrant-active-communities-seniors-1728916",
@@ -24,7 +25,7 @@ const pressArticles = [
   {
     id: 2,
     source: "Business Insider",
-    logo: "/lovable-uploads/a9851e6a-8a29-4691-a9b1-ccafafffe580.png",
+    logo: "/lovable-uploads/7d297830-a420-4abe-9c72-152ac26bd4ad.png",
     title: "Redefining Senior Living: Dr. Jil C. Gunsenheimer's Vision with YOOBELONG",
     description: "Dr. Gunsenheimer's innovative approach to senior living communities is creating new opportunities for active, fulfilling lifestyles...",
     link: "https://markets.businessinsider.com/news/stocks/redefining-senior-living-dr.-jil-c.-gunsenheimers-vision-with-yoobelong-1033596126",
@@ -33,7 +34,7 @@ const pressArticles = [
   {
     id: 3,
     source: "Globe News Wire",
-    logo: "/lovable-uploads/a9851e6a-8a29-4691-a9b1-ccafafffe580.png",
+    logo: "/lovable-uploads/7d297830-a420-4abe-9c72-152ac26bd4ad.png",
     title: "Redefining Senior Living: Dr. Jil C. Gunsenheimer's Vision with YOOBELONG",
     description: "YOOBELONG's founder presents a fresh perspective on community-building for the growing demographic of active seniors in Germany...",
     link: "https://www.globenewswire.com/news-release/2024/07/25/2919003/0/en/Redefining-Senior-Living-Dr-Jil-C-Gunsenheimer-s-Vision-with-YOOBELONG.html",
@@ -139,11 +140,11 @@ const PressMentions = () => {
                         <CardContent className="p-6 flex flex-col h-full">
                           <div className="flex items-center justify-between mb-4">
                             <div className="flex items-center">
-                              <div className="w-16 h-8 flex items-center justify-center overflow-hidden">
+                              <div className="h-12 flex items-center justify-center overflow-hidden">
                                 <img
                                   src={article.logo}
-                                  alt={`${article.source} logo`}
-                                  className="max-w-full max-h-full object-contain"
+                                  alt="YOOBELONG logo"
+                                  className="max-h-10 object-contain"
                                 />
                               </div>
                               <span className="ml-2 text-sm font-medium text-yoogray-600">{article.source}</span>
