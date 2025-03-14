@@ -111,11 +111,6 @@ const InvestorSection = () => {
                   title="Social Impact"
                   description="Make a meaningful difference in addressing the growing need for innovative senior living solutions."
                 />
-                <Benefit
-                  icon={<BarChart4 size={26} />}
-                  title="Attractive Returns"
-                  description="Benefit from our stable, long-term investment model with promising growth potential."
-                />
               </div>
 
               <div 
