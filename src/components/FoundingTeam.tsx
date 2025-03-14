@@ -6,7 +6,7 @@ interface TeamMember {
   name: string;
   role: string;
   bio: string;
-  image: string;
+  image: string; // Keeping the property in the interface for compatibility
   icon: "crown" | "sparkles" | "lightbulb" | "users";
   color: string;
 }
@@ -133,17 +133,9 @@ const FoundingTeam = () => {
               
               {/* Card content with glassmorphism effect */}
               <div className="relative bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl overflow-hidden h-full transition-all duration-300 shadow-lg hover:shadow-xl">
-                <div className="relative aspect-square overflow-hidden bg-yooblue-500 flex items-center justify-center p-6">
-                  <div className={`absolute inset-0 bg-gradient-to-br ${member.color} opacity-30 z-10`} />
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-contain z-20"
-                    style={{ objectFit: "cover", width: "100%", height: "100%" }}
-                  />
-                  
-                  {/* Icon badge */}
-                  <div className={`absolute top-4 right-4 p-2 rounded-full bg-gradient-to-br ${member.color} text-white z-20 shadow-lg`}>
+                {/* Icon badge - moved to top of card */}
+                <div className={`p-4 flex justify-end`}>
+                  <div className={`p-2 rounded-full bg-gradient-to-br ${member.color} text-white shadow-lg`}>
                     {getIcon(member.icon)}
                   </div>
                 </div>
