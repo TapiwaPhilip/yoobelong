@@ -40,7 +40,7 @@ const HomeHero = () => {
             <p className="text-lg md:text-xl text-white/90 mb-8 max-w-3xl backdrop-blur-sm bg-yoogray-900/10 p-4 rounded-lg">
               YOOBELONG creates dynamic local communities centered on shared
               services, activities, and events designed specifically for young
-              seniors in Germany.
+              seniors Globally.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
