@@ -111,18 +111,9 @@ const PartnerSection = () => {
                       <h3 className="text-xl font-bold text-yoogray-900 mb-2">
                         {category.title}
                       </h3>
-                      <p className="text-yoogray-600 mb-4">
+                      <p className="text-yoogray-600">
                         {category.description}
                       </p>
-                      <Button
-                        variant="outline"
-                        className="border-yooblue-500 text-yooblue-500 hover:bg-yooblue-50"
-                        asChild
-                      >
-                        <Link to="/partners">
-                          Learn More
-                        </Link>
-                      </Button>
                     </div>
                   </div>
                 </div>
