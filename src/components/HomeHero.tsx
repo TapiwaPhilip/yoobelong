@@ -10,6 +10,7 @@ import {
   DialogDescription
 } from "@/components/ui/dialog";
 import ContactForm from "@/components/ContactForm";
+import { cn } from "@/lib/utils";
 
 const HomeHero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -20,7 +21,10 @@ const HomeHero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
+    <section 
+      className="relative min-h-screen flex items-center pt-16 overflow-hidden" 
+      aria-labelledby="hero-heading"
+    >
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-yoogray-900/80 to-yoogray-900/40 z-10" />
@@ -28,10 +32,17 @@ const HomeHero = () => {
           src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"
           alt="Seniors having fun together"
           className="w-full h-full object-cover object-center"
+          loading="eager"
+          fetchpriority="high"
         />
       </div>
 
-      <div className="container-section relative z-10">
+      <div 
+        className={cn(
+          "container-section relative z-10 w-full",
+          "animate-fade-in-up"
+        )}
+      >
         <div className="max-w-4xl mx-auto">
           <div
             className={`transition-all duration-1000 ease-out ${
@@ -43,7 +54,10 @@ const HomeHero = () => {
             <span className="inline-block px-4 py-1.5 mb-4 text-sm font-medium rounded-full bg-white/20 backdrop-blur-sm text-white/90">
               Building Communities for Young Seniors in Germany
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 
+              id="hero-heading"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
+            >
               Creating Vibrant Communities
               <span className="block text-gradient-blue">Where You Truly Belong</span>
             </h1>
