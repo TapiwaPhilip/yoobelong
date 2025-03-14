@@ -1,13 +1,12 @@
 
 import { useEffect, useState } from "react";
-import { Sparkles, Crown, Lightbulb, Users } from "lucide-react";
 
 interface TeamMember {
   name: string;
   role: string;
   bio: string;
   image: string; // Keeping the property in the interface for compatibility
-  icon: "crown" | "sparkles" | "lightbulb" | "users";
+  icon: "crown" | "sparkles" | "lightbulb" | "users"; // Keeping for compatibility
   color: string;
 }
 
@@ -74,21 +73,6 @@ const FoundingTeam = () => {
     };
   }, []);
 
-  const getIcon = (iconName: string) => {
-    switch (iconName) {
-      case "crown":
-        return <Crown className="h-7 w-7" />;
-      case "sparkles":
-        return <Sparkles className="h-7 w-7" />;
-      case "lightbulb":
-        return <Lightbulb className="h-7 w-7" />;
-      case "users":
-        return <Users className="h-7 w-7" />;
-      default:
-        return <Sparkles className="h-7 w-7" />;
-    }
-  };
-
   return (
     <section id="team" className="py-20 relative overflow-hidden">
       {/* Abstract background elements */}
@@ -133,13 +117,6 @@ const FoundingTeam = () => {
               
               {/* Card content with glassmorphism effect */}
               <div className="relative bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl overflow-hidden h-full transition-all duration-300 shadow-lg hover:shadow-xl">
-                {/* Icon badge - moved to top of card */}
-                <div className={`p-4 flex justify-end`}>
-                  <div className={`p-2 rounded-full bg-gradient-to-br ${member.color} text-white shadow-lg`}>
-                    {getIcon(member.icon)}
-                  </div>
-                </div>
-                
                 <div className="p-6 backdrop-blur-sm">
                   <h3 className="text-xl font-bold text-yoogray-900 mb-1">
                     {member.name}
