@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -138,7 +137,7 @@ const PressMentions = () => {
                     <CarouselItem key={article.id} className="md:basis-1/2 lg:basis-1/3">
                       <Card className="h-full frost-glass hover-lift">
                         <CardContent className="p-6 flex flex-col h-full">
-                          <div className="flex items-center justify-between mb-4">
+                          <div className="flex items-center mb-4">
                             <div className="flex items-center">
                               <div className="h-12 flex items-center justify-center overflow-hidden">
                                 <img
@@ -149,7 +148,6 @@ const PressMentions = () => {
                               </div>
                               <span className="ml-2 text-sm font-medium text-yoogray-600">{article.source}</span>
                             </div>
-                            <span className="text-xs text-yoogray-500">{article.date}</span>
                           </div>
                           
                           <Separator className="mb-4" />
