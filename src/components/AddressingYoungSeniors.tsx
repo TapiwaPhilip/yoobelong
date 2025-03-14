@@ -160,15 +160,15 @@ const AddressingYoungSeniors = () => {
                   <ul className="space-y-4 text-sm mt-2">
                     <li className="flex items-center gap-2.5 rounded-lg bg-yooblue-50 p-3 hover:bg-yooblue-100 transition-colors">
                       <LineChart className="h-5 w-5 text-yooblue-600 flex-shrink-0" />
-                      <span className="font-medium text-yoogray-800">Market analysis</span>
+                      <span className="font-medium text-yoogray-800">Improved quality of tenants</span>
                     </li>
                     <li className="flex items-center gap-2.5 rounded-lg bg-yooblue-50 p-3 hover:bg-yooblue-100 transition-colors">
                       <LineChart className="h-5 w-5 text-yooblue-600 flex-shrink-0" />
-                      <span className="font-medium text-yoogray-800">Location suitability</span>
+                      <span className="font-medium text-yoogray-800">Energized local communities</span>
                     </li>
                     <li className="flex items-center gap-2.5 rounded-lg bg-yooblue-50 p-3 hover:bg-yooblue-100 transition-colors">
                       <LineChart className="h-5 w-5 text-yooblue-600 flex-shrink-0" />
-                      <span className="font-medium text-yoogray-800">Conversion potential</span>
+                      <span className="font-medium text-yoogray-800">Maximizing rental income</span>
                     </li>
                   </ul>
                   
