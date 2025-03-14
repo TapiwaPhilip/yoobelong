@@ -1,15 +1,12 @@
-
 import React, { useEffect, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Building, Rocket, HeartHandshake, LineChart, HandCoins, Users } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import ContactDialog from "@/components/header/ContactDialog";
-
 const AddressingYoungSeniors = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
-
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       if (entries[0].isIntersecting) {
@@ -23,7 +20,6 @@ const AddressingYoungSeniors = () => {
       observer.disconnect();
     };
   }, []);
-
   return <section id="addressing-young-seniors" className="py-24 relative overflow-hidden bg-gradient-to-b from-white to-yoogray-50">
       {/* Abstract background elements */}
       <div className="absolute inset-0 overflow-hidden opacity-10 pointer-events-none">
@@ -88,11 +84,7 @@ const AddressingYoungSeniors = () => {
                     </li>
                   </ul>
                   
-                  <Button 
-                    variant="outline" 
-                    className="mt-2 border-yooblue-200 text-yooblue-700 hover:bg-yooblue-50"
-                    onClick={() => setIsContactOpen(true)}
-                  >
+                  <Button variant="outline" className="mt-2 border-yooblue-200 text-yooblue-700 hover:bg-yooblue-50" onClick={() => setIsContactOpen(true)}>
                     Learn More
                   </Button>
                 </div>
@@ -137,11 +129,7 @@ const AddressingYoungSeniors = () => {
                     </li>
                   </ul>
                   
-                  <Button 
-                    variant="outline" 
-                    className="mt-2 border-yooblue-200 text-yooblue-700 hover:bg-yooblue-50"
-                    onClick={() => setIsContactOpen(true)}
-                  >
+                  <Button variant="outline" className="mt-2 border-yooblue-200 text-yooblue-700 hover:bg-yooblue-50" onClick={() => setIsContactOpen(true)}>
                     Learn More
                   </Button>
                 </div>
@@ -162,14 +150,12 @@ const AddressingYoungSeniors = () => {
                     <div className="bg-yooblue-100 p-3 rounded-xl">
                       <Building className="h-8 w-8 text-yooblue-700" />
                     </div>
-                    <h3 className="font-bold text-2xl text-yoogray-900">Portfolio Evaluation</h3>
+                    <h3 className="font-bold text-2xl text-yoogray-900">Targeted Refurbishment</h3>
                   </div>
                   
                   <Separator className="bg-yooblue-100" />
                   
-                  <p className="text-yoogray-600 leading-relaxed">
-                    Assessing existing properties to identify opportunities for conversion into senior living communities.
-                  </p>
+                  <p className="text-yoogray-600 leading-relaxed">Renovating standing residential assets in view of introducing serviced living for young seniors</p>
                   
                   <ul className="space-y-4 text-sm mt-2">
                     <li className="flex items-center gap-2.5 rounded-lg bg-yooblue-50 p-3 hover:bg-yooblue-100 transition-colors">
@@ -186,11 +172,7 @@ const AddressingYoungSeniors = () => {
                     </li>
                   </ul>
                   
-                  <Button 
-                    variant="outline" 
-                    className="mt-2 border-yooblue-200 text-yooblue-700 hover:bg-yooblue-50"
-                    onClick={() => setIsContactOpen(true)}
-                  >
+                  <Button variant="outline" className="mt-2 border-yooblue-200 text-yooblue-700 hover:bg-yooblue-50" onClick={() => setIsContactOpen(true)}>
                     Learn More
                   </Button>
                 </div>
@@ -209,11 +191,7 @@ const AddressingYoungSeniors = () => {
       </div>
 
       {/* Contact Dialog */}
-      <ContactDialog 
-        isOpen={isContactOpen}
-        onOpenChange={setIsContactOpen}
-      />
+      <ContactDialog isOpen={isContactOpen} onOpenChange={setIsContactOpen} />
     </section>;
 };
-
 export default AddressingYoungSeniors;
