@@ -21,11 +21,11 @@ const HomeHero = () => {
         <div className="max-w-4xl mx-auto">
           <div className={`transition-all duration-1000 ease-out ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
             <span className="inline-block px-4 py-1.5 mb-4 text-sm font-medium rounded-full bg-white/20 backdrop-blur-sm text-white/90">
-              Building Communities for Young Seniors in Germany
+              Paving the Way for a Dynamic and Engaging Senior Life
             </span>
             <h1 id="hero-heading" className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               Creating Vibrant Communities
-              <span className="block text-gradient-blue">For Young Seniors in Germany (Young by Age, or by Heart)</span>
+              <span className="block text-gradient-blue">For Young Seniors (Young by Age, or by Heart)</span>
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-8 max-w-3xl backdrop-blur-sm bg-yoogray-900/10 p-4 rounded-lg">
               YOOBELONG creates dynamic local communities centered on shared
