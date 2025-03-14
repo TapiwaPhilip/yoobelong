@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -16,7 +15,7 @@ const pressArticles = [
   {
     id: 1,
     source: "IBTimes",
-    logo: "https://www.ibtimes.co.uk/reporter/uploads/ibtimes-uk-blue-small.png",
+    logo: "/lovable-uploads/9e037f15-7d24-4ff0-9d1e-8967b8036ee9.png",
     title: "Senior Living Redefined: How YOOBELONG is Shaping the Future of Vibrant, Active Communities for Seniors",
     description: "YOOBELONG is revolutionizing the senior living space through innovative community-focused solutions...",
     link: "https://www.ibtimes.co.uk/senior-living-redefined-how-yoobelong-shaping-future-vibrant-active-communities-seniors-1728916",
@@ -25,7 +24,7 @@ const pressArticles = [
   {
     id: 2,
     source: "Business Insider",
-    logo: "https://s.yimg.com/ny/api/res/1.2/q7vxayLPs1Fzx0c.8ztOGg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzU-/https://media.zenfs.com/en/business_insider_articles_888/76e2b265a3e2d7a0783f2e0f49f5b166",
+    logo: "/lovable-uploads/a9851e6a-8a29-4691-a9b1-ccafafffe580.png",
     title: "Redefining Senior Living: Dr. Jil C. Gunsenheimer's Vision with YOOBELONG",
     description: "Dr. Gunsenheimer's innovative approach to senior living communities is creating new opportunities for active, fulfilling lifestyles...",
     link: "https://markets.businessinsider.com/news/stocks/redefining-senior-living-dr.-jil-c.-gunsenheimers-vision-with-yoobelong-1033596126",
@@ -34,7 +33,7 @@ const pressArticles = [
   {
     id: 3,
     source: "Globe News Wire",
-    logo: "https://ml.globenewswire.com/Resource/Download/3312ae09-973e-4a1a-9fd9-ff61ec3be721",
+    logo: "/lovable-uploads/a9851e6a-8a29-4691-a9b1-ccafafffe580.png",
     title: "Redefining Senior Living: Dr. Jil C. Gunsenheimer's Vision with YOOBELONG",
     description: "YOOBELONG's founder presents a fresh perspective on community-building for the growing demographic of active seniors in Germany...",
     link: "https://www.globenewswire.com/news-release/2024/07/25/2919003/0/en/Redefining-Senior-Living-Dr-Jil-C-Gunsenheimer-s-Vision-with-YOOBELONG.html",
