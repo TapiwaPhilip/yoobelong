@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Heart, Globe, Handshake } from "lucide-react";
+import { Heart, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 import { 
   Dialog, 
@@ -45,13 +45,7 @@ const PartnerSection = () => {
       title: "Local Businesses",
       description: "Partner with us to provide special offerings, services and experiences to our community residents.",
       color: "bg-green-500",
-    },
-    {
-      icon: <Handshake className="h-8 w-8 text-white" />,
-      title: "Community Organizations",
-      description: "Collaborate on events, programs and initiatives that enrich our communities and the surrounding neighborhoods.",
-      color: "bg-yooblue-500",
-    },
+    }
   ];
 
   return (
