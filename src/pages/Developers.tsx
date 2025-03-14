@@ -1,7 +1,7 @@
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import DeveloperSection from "@/components/DeveloperSection";
+import DevelopersPageSection from "@/components/DevelopersPageSection";
 import PartnerLogoGrid from "@/components/PartnerLogoGrid";
 
 const Developers = () => {
@@ -52,7 +52,7 @@ const Developers = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20">
-        <DeveloperSection />
+        <DevelopersPageSection />
         <PartnerLogoGrid 
           partners={currentDevelopers}
           title="Our Development Partners"

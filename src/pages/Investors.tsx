@@ -1,7 +1,7 @@
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import InvestorSection from "@/components/InvestorSection";
+import InvestorsPageSection from "@/components/InvestorsPageSection";
 import PartnerLogoGrid from "@/components/PartnerLogoGrid";
 
 const Investors = () => {
@@ -52,7 +52,7 @@ const Investors = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20">
-        <InvestorSection />
+        <InvestorsPageSection />
         <PartnerLogoGrid 
           partners={currentInvestors}
           title="Our Investment Partners"
