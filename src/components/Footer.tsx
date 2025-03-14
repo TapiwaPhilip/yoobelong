@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
@@ -163,12 +162,12 @@ const Footer = () => {
             &copy; {year} YOOBELONG GmbH. All rights reserved.
           </div>
           <div className="flex space-x-6">
-            <a href="#" className="hover:text-white transition-colors">
+            <Link to="/privacy-policy" className="hover:text-white transition-colors">
               Privacy Policy
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
+            </Link>
+            <Link to="/terms-of-service" className="hover:text-white transition-colors">
               Terms of Service
-            </a>
+            </Link>
             <a href="#" className="hover:text-white transition-colors">
               Cookie Policy
             </a>

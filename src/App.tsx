@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -12,10 +11,11 @@ import Investors from "./pages/Investors";
 import Developers from "./pages/Developers";
 import Partners from "./pages/Partners";
 import Careers from "./pages/Careers";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 
 const queryClient = new QueryClient();
 
-// Scroll to top on route change
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
@@ -40,6 +40,8 @@ const App = () => (
           <Route path="/developers" element={<Developers />} />
           <Route path="/partners" element={<Partners />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
