@@ -70,7 +70,7 @@ const Imprint = () => {
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold mb-4">Responsible for Content</h2>
                 <p className="mb-2">According to § 55, para. 2 RStV (German Interstate Broadcasting Agreement):</p>
-                <p className="mb-2">Dr. Jane Doe</p>
+                <p className="mb-2">Dr. Jil C. Gunsenheimer</p>
                 <p className="mb-2">YOOBELONG GmbH</p>
                 <p className="mb-2">Kurfürstendamm 194</p>
                 <p className="mb-2">10707 Berlin</p>
@@ -79,8 +79,8 @@ const Imprint = () => {
 
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold mb-4">Managing Directors</h2>
-                <p className="mb-2">Dr. Jane Doe</p>
-                <p className="mb-2">John Smith</p>
+                <p className="mb-2">Dr. Jil C. Gunsenheimer</p>
+                <p className="mb-2">Marco Schreiber</p>
               </section>
 
               <section className="mb-8">
