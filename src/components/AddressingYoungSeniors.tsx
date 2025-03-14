@@ -4,9 +4,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Building, Rocket, HeartHandshake, LineChart, HandCoins, Users } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
+import ContactDialog from "@/components/header/ContactDialog";
 
 const AddressingYoungSeniors = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
@@ -86,7 +88,11 @@ const AddressingYoungSeniors = () => {
                     </li>
                   </ul>
                   
-                  <Button variant="outline" className="mt-2 border-yooblue-200 text-yooblue-700 hover:bg-yooblue-50">
+                  <Button 
+                    variant="outline" 
+                    className="mt-2 border-yooblue-200 text-yooblue-700 hover:bg-yooblue-50"
+                    onClick={() => setIsContactOpen(true)}
+                  >
                     Learn More
                   </Button>
                 </div>
@@ -131,7 +137,11 @@ const AddressingYoungSeniors = () => {
                     </li>
                   </ul>
                   
-                  <Button variant="outline" className="mt-2 border-yooblue-200 text-yooblue-700 hover:bg-yooblue-50">
+                  <Button 
+                    variant="outline" 
+                    className="mt-2 border-yooblue-200 text-yooblue-700 hover:bg-yooblue-50"
+                    onClick={() => setIsContactOpen(true)}
+                  >
                     Learn More
                   </Button>
                 </div>
@@ -176,7 +186,11 @@ const AddressingYoungSeniors = () => {
                     </li>
                   </ul>
                   
-                  <Button variant="outline" className="mt-2 border-yooblue-200 text-yooblue-700 hover:bg-yooblue-50">
+                  <Button 
+                    variant="outline" 
+                    className="mt-2 border-yooblue-200 text-yooblue-700 hover:bg-yooblue-50"
+                    onClick={() => setIsContactOpen(true)}
+                  >
                     Learn More
                   </Button>
                 </div>
@@ -193,6 +207,12 @@ const AddressingYoungSeniors = () => {
           </div>
         </div>
       </div>
+
+      {/* Contact Dialog */}
+      <ContactDialog 
+        isOpen={isContactOpen}
+        onOpenChange={setIsContactOpen}
+      />
     </section>;
 };
 
