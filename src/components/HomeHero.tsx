@@ -36,7 +36,7 @@ const HomeHero = () => {
             </span>
             <h1 id="hero-heading" className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               Creating Vibrant Communities
-              <span className="block text-gradient-blue">For Young Seniors (Young by Age, or by Heart)</span>
+              <span className="block text-gradient-blue">For Young at Heart or by Age Seniors</span>
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-8 max-w-3xl backdrop-blur-sm bg-yoogray-900/10 p-4 rounded-lg">
               YOOBELONG creates dynamic local communities centered on shared
