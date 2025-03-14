@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DevelopersPageSection from "@/components/DevelopersPageSection";
 import PartnerLogoGrid from "@/components/PartnerLogoGrid";
+import PageSEO from "@/components/SEO/PageSEO";
 
 const Developers = () => {
   const currentDevelopers = [
@@ -50,6 +51,12 @@ const Developers = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <PageSEO 
+        title="Real Estate Developers | YOOBELONG Partnerships"
+        description="YOOBELONG collaborates with innovative real estate developers to build the next generation of senior living communities across Germany."
+        keywords="property developers, senior housing development, real estate partners, construction partnerships"
+        canonicalUrl="https://www.yoobelong.com/developers"
+      />
       <Header />
       <main className="pt-20">
         <DevelopersPageSection />

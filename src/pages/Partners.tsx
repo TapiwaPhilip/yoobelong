@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PartnersPageSection from "@/components/PartnersPageSection";
 import PartnerLogoGrid from "@/components/PartnerLogoGrid";
+import PageSEO from "@/components/SEO/PageSEO";
 
 const Partners = () => {
   const currentPartners = [
@@ -50,6 +51,12 @@ const Partners = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <PageSEO 
+        title="Our Partners | YOOBELONG Service Providers"
+        description="YOOBELONG partners with leading service providers to enhance the living experience of our community members. Discover our trusted partnerships."
+        keywords="YOOBELONG partners, senior services, community partnerships, service providers"
+        canonicalUrl="https://www.yoobelong.com/partners"
+      />
       <Header />
       <main className="pt-20">
         <PartnersPageSection />

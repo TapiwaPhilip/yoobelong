@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import InvestorsPageSection from "@/components/InvestorsPageSection";
 import PartnerLogoGrid from "@/components/PartnerLogoGrid";
+import PageSEO from "@/components/SEO/PageSEO";
 
 const Investors = () => {
   const currentInvestors = [
@@ -50,6 +51,12 @@ const Investors = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <PageSEO 
+        title="Investors | YOOBELONG Investment Opportunities"
+        description="Explore investment opportunities with YOOBELONG. Join our partners in transforming senior living through innovative community-based properties."
+        keywords="senior living investment, real estate investors, property investment, retirement community funding"
+        canonicalUrl="https://www.yoobelong.com/investors"
+      />
       <Header />
       <main className="pt-20">
         <InvestorsPageSection />

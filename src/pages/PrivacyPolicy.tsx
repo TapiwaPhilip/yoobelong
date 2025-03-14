@@ -6,14 +6,17 @@ import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbS
 import { Separator } from "@/components/ui/separator";
 import { Home } from "lucide-react";
 import { Link } from "react-router-dom";
+import PageSEO from "@/components/SEO/PageSEO";
 
 const PrivacyPolicy = () => {
-  useEffect(() => {
-    document.title = "Privacy Policy | YOOBELONG";
-  }, []);
-
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <PageSEO 
+        title="Privacy Policy | YOOBELONG"
+        description="Read YOOBELONG's privacy policy. Learn how we collect, use, and protect your personal information when you use our services."
+        keywords="privacy policy, data protection, GDPR, personal data, YOOBELONG privacy"
+        canonicalUrl="https://www.yoobelong.com/privacy-policy"
+      />
       <Header />
       <main className="flex-1">
         <div className="container-section py-8 md:py-12">

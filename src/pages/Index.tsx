@@ -9,6 +9,7 @@ import DeveloperSection from "@/components/DeveloperSection";
 import PartnerSection from "@/components/PartnerSection";
 import AddressingYoungSeniors from "@/components/AddressingYoungSeniors";
 import PressMentions from "@/components/PressMentions";
+import PageSEO from "@/components/SEO/PageSEO";
 
 const Index = () => {
   useEffect(() => {
@@ -44,6 +45,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <PageSEO 
+        title="YOOBELONG - Innovative Living Communities for Young Seniors"
+        description="YOOBELONG creates vibrant community-focused living spaces for active seniors who want to maintain independence while enjoying social connections."
+        keywords="senior living, young seniors, community living, active seniors, retirement community, Germany"
+        canonicalUrl="https://www.yoobelong.com/"
+      />
       <Header />
       <main>
         <HomeHero />
