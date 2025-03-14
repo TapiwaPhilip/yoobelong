@@ -37,7 +37,7 @@ const PartnerSection = () => {
     {
       icon: <Heart className="h-8 w-8 text-white" />,
       title: "Healthcare Services",
-      description: "Join our network of healthcare providers offering on-site and telehealth services to our community members.",
+      description: "Join our network of healthcare providers offering on-site and digital health services to our community members.",
       color: "bg-red-500",
     },
     {
