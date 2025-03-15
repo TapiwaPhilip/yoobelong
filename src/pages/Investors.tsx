@@ -64,6 +64,8 @@ const Investors = () => {
           partners={currentInvestors}
           title="Our Investment Partners"
           subtitle="YOOBELONG is proud to collaborate with forward-thinking investors who share our vision for revolutionizing senior living in Germany."
+          limit={4}
+          variant="modern"
         />
       </main>
       <Footer />
