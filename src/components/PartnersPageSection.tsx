@@ -1,10 +1,12 @@
-
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Handshake, ChevronRight, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
 import { motion } from "framer-motion";
+import ContactDialog from "@/components/header/ContactDialog";
 
 const PartnersPageSection = () => {
+  const [contactDialogOpen, setContactDialogOpen] = useState(false);
+  
   const partnerBenefits = [
     "Access to a growing community of young seniors",
     "Dedicated marketing to an engaged audience",
@@ -38,7 +40,8 @@ const PartnersPageSection = () => {
 
   return (
     <section className="py-24 px-4 md:px-8 relative overflow-hidden">
-      {/* Decorative background elements */}
+      <ContactDialog isOpen={contactDialogOpen} onOpenChange={setContactDialogOpen} />
+      
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-50 via-white to-purple-50 -z-10"></div>
       <div className="absolute -top-24 -right-24 w-64 h-64 bg-gradient-to-br from-pink-200/40 to-purple-200/40 rounded-full blur-3xl -z-10"></div>
       <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-gradient-to-tr from-blue-200/40 to-cyan-200/40 rounded-full blur-3xl -z-10"></div>
@@ -106,16 +109,17 @@ const PartnersPageSection = () => {
             >
               <Button
                 className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transition-all group px-6 py-6 h-auto"
-                asChild
+                onClick={() => setContactDialogOpen(true)}
               >
-                <Link to="/partners" className="flex items-center gap-2">
+                <span className="flex items-center gap-2">
                   Become a Partner 
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
+                </span>
               </Button>
               <Button
                 variant="outline"
                 className="border-2 border-purple-200 text-purple-600 hover:bg-purple-50 hover:border-purple-300 group px-6 py-6 h-auto"
+                onClick={() => setContactDialogOpen(true)}
               >
                 <span className="flex items-center gap-2">
                   View Our Partners
@@ -139,6 +143,9 @@ const PartnersPageSection = () => {
                   src="https://images.unsplash.com/photo-1560265036-021766a8fced?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
                   alt="Partners collaborating"
                   className="w-full h-96 object-cover"
+                  onError={(e) => {
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80";
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
               </div>
