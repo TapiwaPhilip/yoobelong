@@ -21,8 +21,28 @@ const PartnerLogoGrid = ({
   variant = "default" 
 }: PartnerLogoProps) => {
   const [isVisible, setIsVisible] = useState(false);
+  const [failedImages, setFailedImages] = useState<Set<string>>(new Set());
   
   const displayPartners = limit ? partners.slice(0, limit) : partners;
+
+  const handleImageError = (logoUrl: string) => {
+    setFailedImages(prev => {
+      const newSet = new Set(prev);
+      newSet.add(logoUrl);
+      return newSet;
+    });
+  };
+
+  const getFallbackImage = (index: number) => {
+    // Rotate through a set of reliable placeholder images
+    const fallbacks = [
+      "https://images.unsplash.com/photo-1634128222187-5ec54a4b6df3",
+      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf",
+      "https://images.unsplash.com/photo-1579532537598-459ecdaf39cc",
+      "https://images.unsplash.com/photo-1551135049-8a33b5883817"
+    ];
+    return fallbacks[index % fallbacks.length];
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -90,8 +110,9 @@ const PartnerLogoGrid = ({
                   : "h-16 w-full flex items-center justify-center mb-4"}
               `}>
                 <img
-                  src={partner.logo}
+                  src={failedImages.has(partner.logo) ? getFallbackImage(index) : partner.logo}
                   alt={partner.name}
+                  onError={() => handleImageError(partner.logo)}
                   className={`
                     object-contain
                     ${variant === "modern" ? "max-h-20 max-w-full" : "max-h-16 max-w-full"}

@@ -9,42 +9,42 @@ const Investors = () => {
   const currentInvestors = [
     {
       name: "Global Capital Partners",
-      logo: "https://images.unsplash.com/photo-1548094878-84ced0f6896d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+      logo: "https://images.unsplash.com/photo-1634128222187-5ec54a4b6df3?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
       description: "Venture capital"
     },
     {
       name: "Horizon Investments",
-      logo: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+      logo: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
       description: "Real estate fund"
     },
     {
       name: "Silverline Equity",
-      logo: "https://images.unsplash.com/photo-1634128222187-5ec54a4b6df3?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+      logo: "https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
       description: "Senior living specialist"
     },
     {
       name: "BlueChip Holdings",
-      logo: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+      logo: "https://images.unsplash.com/photo-1551135049-8a33b5883817?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
       description: "Family office"
     },
     {
       name: "Evergreen Ventures",
-      logo: "https://images.unsplash.com/photo-1637611331620-51149c7ceb94?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+      logo: "https://images.unsplash.com/photo-1616587226960-4a03badbe8bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
       description: "Sustainable investments"
     },
     {
       name: "Prime Funding Group",
-      logo: "https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+      logo: "https://images.unsplash.com/photo-1606189934846-a527add8a77b?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
       description: "Institutional investor"
     },
     {
       name: "Rheinland Capital",
-      logo: "https://images.unsplash.com/photo-1551135049-8a33b5883817?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+      logo: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
       description: "Regional investment"
     },
     {
       name: "Future Growth Fund",
-      logo: "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+      logo: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
       description: "Technology-focused"
     }
   ];
