@@ -1,3 +1,4 @@
+
 import React from "react";
 import { motion } from "framer-motion";
 import { Code, Database, Handshake } from "lucide-react";
@@ -37,7 +38,7 @@ const InternshipSection = () => {
     iconColorClass: "bg-gradient-to-br from-amber-100 to-orange-100",
     buttonGradientClass: "bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600"
   }];
-  return <section className="py-24 relative">
+  return <section id="internship-section" className="py-24 relative">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_30%_40%,rgba(147,51,234,0.05),transparent_70%)]"></div>
       
       <div className="container-section">

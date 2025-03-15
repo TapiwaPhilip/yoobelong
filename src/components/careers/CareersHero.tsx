@@ -5,6 +5,13 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const CareersHero = () => {
+  const scrollToPositions = () => {
+    const internshipSection = document.getElementById('internship-section');
+    if (internshipSection) {
+      internshipSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative py-24 overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_70%_60%,rgba(100,149,237,0.1),transparent_70%)]"></div>
@@ -62,6 +69,7 @@ const CareersHero = () => {
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white shadow-lg group px-6 py-6 h-auto rounded-xl"
+                onClick={scrollToPositions}
               >
                 <span className="mr-2">View Open Positions</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
