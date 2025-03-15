@@ -5,6 +5,7 @@ import AboutUsFeatures from "./AboutUsFeatures";
 import AboutUsVision from "./AboutUsVision";
 import AboutUsGallery from "./AboutUsGallery";
 import AboutUsCTA from "./AboutUsCTA";
+import AboutUsInvestors from "./AboutUsInvestors";
 
 const AboutUsContent = () => {
   return (
@@ -13,6 +14,7 @@ const AboutUsContent = () => {
       <AboutUsMission />
       <AboutUsFeatures />
       <AboutUsVision />
+      <AboutUsInvestors />
       <AboutUsGallery />
       <AboutUsCTA />
     </>
