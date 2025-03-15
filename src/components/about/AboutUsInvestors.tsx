@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Sparkles, TrendingUp, Award } from "lucide-react";
@@ -12,12 +11,12 @@ interface Investor {
 const investors: Investor[] = [
   {
     name: "Angel Investor",
-    logo: "/placeholder.svg",
+    logo: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&auto=format&fit=crop",
     color: "from-indigo-500 to-purple-600"
   },
   {
     name: "Angel Investor",
-    logo: "/placeholder.svg",
+    logo: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop",
     color: "from-sky-400 to-blue-600"
   }
 ];
@@ -97,11 +96,11 @@ const AboutUsInvestors = () => {
               <CardContent className="p-10 flex flex-col items-center justify-center relative">
                 <div className="absolute top-0 right-0 left-0 h-24 bg-gradient-to-b from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
-                <div className="w-36 h-36 flex items-center justify-center mb-6 bg-white rounded-full p-5 shadow-md border border-gray-100 group-hover:scale-105 transition-transform duration-500">
+                <div className="w-36 h-36 flex items-center justify-center mb-6 bg-white rounded-full p-5 shadow-md border border-gray-100 group-hover:scale-105 transition-transform duration-500 overflow-hidden">
                   <img 
                     src={investor.logo} 
                     alt={`${investor.name} logo`} 
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-cover rounded-full"
                   />
                 </div>
                 
@@ -117,11 +116,6 @@ const AboutUsInvestors = () => {
                 
                 <div className="mt-4 w-full pt-4 border-t border-gray-100">
                   <div className="flex justify-center gap-4">
-                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 text-yoogray-600 hover:bg-gray-200 transition-colors cursor-pointer">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                      </svg>
-                    </span>
                     <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 text-yoogray-600 hover:bg-gray-200 transition-colors cursor-pointer">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
