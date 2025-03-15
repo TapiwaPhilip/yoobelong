@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Building, Key, MapPin, Users } from "lucide-react";
@@ -148,7 +147,7 @@ const DevelopersPageSection = () => {
                 className="bg-gradient-to-r from-yooblue-500 to-purple-600 hover:from-yooblue-600 hover:to-purple-700 text-white w-full py-6 text-lg rounded-xl shadow-lg border border-yooblue-200"
                 onClick={() => setIsContactDialogOpen(true)}
               >
-                Explore Partnership Opportunities
+                Partner With Us
               </Button>
             </div>
           </div>
