@@ -1,6 +1,9 @@
+
 import React from "react";
 import { motion } from "framer-motion";
 import { Award, CheckCircle2, ExternalLink, Utensils } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
 const StaffIncentives = () => {
   return <section className="py-24 relative">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0.05),transparent_70%)]"></div>
@@ -61,12 +64,18 @@ const StaffIncentives = () => {
               <p className="text-yoogray-600 mb-6">
                 Enjoy delicious meals from a variety of local restaurants with your team, once a week through our partnership with Urban Eats Club.
               </p>
-              <motion.a href="https://www.urbaneatsclub.com/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-pink-600 font-medium hover:text-pink-700 transition-colors" whileHover={{
-              x: 5
-            }}>
-                Learn more about Urban Eats Club
-                <ExternalLink className="ml-2 h-4 w-4" />
-              </motion.a>
+              <motion.div whileHover={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
+                <Button
+                  variant="outline"
+                  className="group border-pink-200 text-pink-600 hover:bg-pink-50 hover:text-pink-700 hover:border-pink-300"
+                  asChild
+                >
+                  <a href="https://www.urbaneatsclub.com/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2">
+                    Learn more about Urban Eats Club
+                    <ExternalLink className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
+                  </a>
+                </Button>
+              </motion.div>
             </div>
             <div className="bg-gradient-to-br from-pink-500 to-orange-500 p-8 text-white">
               <div className="h-full flex flex-col justify-center">
