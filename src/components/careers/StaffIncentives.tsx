@@ -16,7 +16,7 @@ const StaffIncentives = () => {
       repeatType: "reverse"
     }} />
       
-      <div className="container-section">
+      <div className="container-section mx-8 md:mx-16 lg:mx-24">
         <motion.div className="max-w-3xl mx-auto text-center mb-16" initial={{
         opacity: 0,
         y: 20
