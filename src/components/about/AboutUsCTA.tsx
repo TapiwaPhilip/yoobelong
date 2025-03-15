@@ -1,8 +1,12 @@
 
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import ContactDialog from "@/components/header/ContactDialog";
 
 const AboutUsCTA = () => {
+  const [isContactOpen, setIsContactOpen] = useState(false);
+
   return (
     <section className="py-16 md:py-24 bg-yoogray-100">
       <div className="container-section">
@@ -15,6 +19,7 @@ const AboutUsCTA = () => {
             <Button
               className="bg-yooblue-500 hover:bg-yooblue-600 text-white rounded-lg px-6 py-6 text-lg"
               size="lg"
+              onClick={() => setIsContactOpen(true)}
             >
               Discover Our Communities
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -23,12 +28,14 @@ const AboutUsCTA = () => {
               variant="outline"
               className="border-yooblue-500 text-yooblue-500 hover:bg-yooblue-50 rounded-lg px-6 py-6 text-lg"
               size="lg"
+              onClick={() => setIsContactOpen(true)}
             >
               Contact Us
             </Button>
           </div>
         </div>
       </div>
+      <ContactDialog isOpen={isContactOpen} onOpenChange={setIsContactOpen} />
     </section>
   );
 };

@@ -1,8 +1,12 @@
 
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import ContactDialog from "@/components/header/ContactDialog";
 
 const AboutUsVision = () => {
+  const [isContactOpen, setIsContactOpen] = useState(false);
+
   return (
     <section className="py-16 md:py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-yooblue-600 to-yooblue-400 opacity-90"></div>
@@ -15,12 +19,14 @@ const AboutUsVision = () => {
           <Button 
             className="bg-white text-yooblue-600 hover:bg-yooblue-50 px-8 py-6 text-lg rounded-lg"
             size="lg"
+            onClick={() => setIsContactOpen(true)}
           >
             Partner With Us
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
       </div>
+      <ContactDialog isOpen={isContactOpen} onOpenChange={setIsContactOpen} />
     </section>
   );
 };
