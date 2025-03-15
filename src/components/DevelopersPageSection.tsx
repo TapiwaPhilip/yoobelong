@@ -2,10 +2,11 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Building, Key, MapPin, Users } from "lucide-react";
-import { Link } from "react-router-dom";
+import ContactDialog from "@/components/header/ContactDialog";
 
 const DevelopersPageSection = () => {
   const [activeSlide, setActiveSlide] = useState(0);
+  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
 
   const projects = [
     {
@@ -137,23 +138,26 @@ const DevelopersPageSection = () => {
               </div>
             </div>
             
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-yoogray-100">
+            <div className="bg-white p-8 rounded-xl shadow-md border border-yoogray-100 hover:shadow-lg transition-all duration-300">
               <h4 className="font-semibold text-yoogray-900 mb-2">Development Partnership Program</h4>
               <p className="text-yoogray-600 mb-4">
                 Our collaborative approach ensures streamlined processes from site selection to community programming, with ongoing operational support.
               </p>
               <Button
                 className="bg-yooblue-500 hover:bg-yooblue-600 text-white w-full"
-                asChild
+                onClick={() => setIsContactDialogOpen(true)}
               >
-                <Link to="/developers">
-                  Explore Partnership Opportunities
-                </Link>
+                Explore Partnership Opportunities
               </Button>
             </div>
           </div>
         </div>
       </div>
+      
+      <ContactDialog 
+        isOpen={isContactDialogOpen} 
+        onOpenChange={setIsContactDialogOpen} 
+      />
     </section>
   );
 };
