@@ -67,47 +67,55 @@ const PartnerLogoGrid = ({
     };
   }, []);
 
+  // Color palette for card background and accents
+  const cardColors = [
+    { bg: "bg-gradient-to-br from-blue-50 via-white to-purple-50", accent: "from-blue-300 to-purple-300" },
+    { bg: "bg-gradient-to-br from-green-50 via-white to-teal-50", accent: "from-green-300 to-teal-300" },
+    { bg: "bg-gradient-to-br from-orange-50 via-white to-amber-50", accent: "from-orange-300 to-amber-300" },
+    { bg: "bg-gradient-to-br from-pink-50 via-white to-rose-50", accent: "from-pink-300 to-rose-300" }
+  ];
+
   return (
-    <div className={`py-16 ${variant === "modern" ? "bg-gradient-to-br from-blue-50 via-white to-purple-50" : "bg-white"}`}>
-      <div className="container-section partner-logo-grid">
-        <div className="text-center mb-12">
-          <h2 className={`text-2xl md:text-3xl font-bold mb-3 ${
-            variant === "modern" ? "text-gradient-blue" : "text-yoogray-900"
+    <div className={`py-20 px-6 ${variant === "modern" ? "bg-gradient-to-br from-slate-50 via-white to-gray-50" : "bg-white"}`}>
+      <div className="container-section max-w-6xl mx-auto partner-logo-grid">
+        <div className="text-center mb-16">
+          <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${
+            variant === "modern" ? "bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600" : "text-yoogray-900"
           }`}>{title}</h2>
-          <p className="text-yoogray-600 max-w-2xl mx-auto">{subtitle}</p>
-          {variant === "modern" && <div className="section-divider mt-6"></div>}
+          <p className="text-yoogray-600 max-w-2xl mx-auto text-lg">{subtitle}</p>
+          {variant === "modern" && <div className="w-20 h-1.5 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mt-8"></div>}
         </div>
 
         <div className={`grid ${
           variant === "modern" 
-            ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10" 
+            ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12" 
             : "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8"
         }`}>
           {displayPartners.map((partner, index) => (
             <div
               key={partner.name}
               className={`
-                flex flex-col items-center text-center transition-all duration-500 ease-out
+                flex flex-col items-center text-center transition-all duration-700 ease-out
                 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
                 ${variant === "modern" 
-                  ? "bg-white rounded-xl p-8 border-0 shadow-lg hover-lift overflow-hidden" 
+                  ? `${cardColors[index % cardColors.length].bg} rounded-xl p-10 border-0 shadow-lg hover:shadow-xl hover:-translate-y-2 transform transition-all duration-300` 
                   : "bg-white rounded-xl p-6 shadow-sm border border-yoogray-100"}
               `}
               style={{ 
-                transitionDelay: `${index * 100}ms`,
+                transitionDelay: `${index * 150}ms`,
                 ...(variant === "modern" ? {
                   boxShadow: "0 10px 40px -14px rgba(0, 0, 0, 0.15)",
-                  borderRadius: "1rem"
+                  borderRadius: "1.25rem"
                 } : {})
               }}
             >
               {variant === "modern" && (
-                <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-blue-400 to-purple-500"></div>
+                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-400 to-purple-500 rounded-t-xl"></div>
               )}
               
               <div className={`
                 ${variant === "modern" 
-                  ? "h-20 w-full flex items-center justify-center mb-6" 
+                  ? "h-24 w-full flex items-center justify-center mb-8" 
                   : "h-16 w-full flex items-center justify-center mb-4"}
               `}>
                 <img
@@ -116,24 +124,24 @@ const PartnerLogoGrid = ({
                   onError={() => handleImageError(partner.logo)}
                   className={`
                     object-contain
-                    ${variant === "modern" ? "max-h-20 max-w-full" : "max-h-16 max-w-full"}
+                    ${variant === "modern" ? "max-h-24 max-w-full" : "max-h-16 max-w-full"}
                   `}
                 />
               </div>
               
               <h3 className={`
-                font-semibold mb-1
-                ${variant === "modern" ? "text-yoogray-800 text-lg" : "text-yoogray-900"}
+                font-semibold mb-2
+                ${variant === "modern" ? "text-yoogray-800 text-xl" : "text-yoogray-900"}
               `}>{partner.name}</h3>
               
               {partner.description && (
                 <p className={`
-                  ${variant === "modern" ? "text-yoogray-500 mt-2" : "text-yoogray-500 text-sm"}
+                  ${variant === "modern" ? "text-yoogray-600 mt-3 text-base" : "text-yoogray-500 text-sm"}
                 `}>{partner.description}</p>
               )}
               
               {variant === "modern" && (
-                <div className="w-12 h-1 bg-gradient-to-r from-blue-300 to-purple-300 rounded-full mt-4"></div>
+                <div className={`w-16 h-1.5 bg-gradient-to-r ${cardColors[index % cardColors.length].accent} rounded-full mt-6`}></div>
               )}
             </div>
           ))}

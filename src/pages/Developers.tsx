@@ -64,6 +64,8 @@ const Developers = () => {
           partners={currentDevelopers}
           title="Our Development Partners"
           subtitle="YOOBELONG collaborates with leading developers across Germany to build innovative living spaces for young seniors."
+          limit={4}
+          variant="modern"
         />
       </main>
       <Footer />
