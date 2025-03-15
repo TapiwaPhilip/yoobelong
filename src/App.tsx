@@ -12,6 +12,7 @@ import Investors from "./pages/Investors";
 import Developers from "./pages/Developers";
 import Partners from "./pages/Partners";
 import Careers from "./pages/Careers";
+import JobApplication from "./pages/JobApplication";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import Imprint from "./pages/Imprint";
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/developers" element={<Developers />} />
           <Route path="/partners" element={<Partners />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/careers/apply/:jobId" element={<JobApplication />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/imprint" element={<Imprint />} />

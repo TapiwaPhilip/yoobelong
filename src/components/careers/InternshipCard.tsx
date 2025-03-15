@@ -1,9 +1,9 @@
-
 import React from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Clock, FileText, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface InternshipCardProps {
   index: number;
@@ -46,6 +46,10 @@ const InternshipCard: React.FC<InternshipCardProps> = ({
       boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" 
     }
   };
+
+  // Generate a URL-friendly job ID from the job title
+  const jobId = title.toLowerCase().replace(/\s+/g, '-');
+  const applicationUrl = `/careers/apply/${jobId}`;
 
   return (
     <motion.div 
@@ -100,8 +104,11 @@ const InternshipCard: React.FC<InternshipCardProps> = ({
           </div>
           
           <div className="p-6 pt-0 bg-gray-50/80">
-            <Button className={`w-full ${buttonGradientClass} text-white`}>
-              Apply Now
+            <Button 
+              className={`w-full ${buttonGradientClass} text-white`}
+              asChild
+            >
+              <Link to={applicationUrl}>Apply Now</Link>
             </Button>
           </div>
         </CardContent>
