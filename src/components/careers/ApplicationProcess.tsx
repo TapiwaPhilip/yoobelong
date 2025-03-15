@@ -3,8 +3,17 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, FileText, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const ApplicationProcess = () => {
+  // Function to scroll to internship section
+  const scrollToInternships = () => {
+    const internshipSection = document.getElementById("internship-section");
+    if (internshipSection) {
+      internshipSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="py-24 relative">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgba(249,115,22,0.05),transparent_50%)]"></div>
@@ -130,6 +139,7 @@ const ApplicationProcess = () => {
           <Button 
             size="lg"
             className="bg-gradient-to-r from-blue-500 via-purple-500 to-amber-500 text-white hover:opacity-90 shadow-lg px-8 py-6 h-auto rounded-xl group"
+            onClick={scrollToInternships}
           >
             <span className="mr-2">Start Your Application Journey</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
