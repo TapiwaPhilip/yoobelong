@@ -31,15 +31,16 @@ const PartnerLogoGrid = ({
       newSet.add(logoUrl);
       return newSet;
     });
+    console.log(`Image failed to load: ${logoUrl}`);
   };
 
   const getFallbackImage = (index: number) => {
-    // Rotate through a set of reliable placeholder images
+    // Reliable placeholder images that are verified to work
     const fallbacks = [
-      "https://images.unsplash.com/photo-1634128222187-5ec54a4b6df3",
-      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf",
-      "https://images.unsplash.com/photo-1579532537598-459ecdaf39cc",
-      "https://images.unsplash.com/photo-1551135049-8a33b5883817"
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
     ];
     return fallbacks[index % fallbacks.length];
   };

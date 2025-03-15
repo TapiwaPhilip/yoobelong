@@ -9,7 +9,7 @@ const Investors = () => {
   const currentInvestors = [
     {
       name: "Global Capital Partners",
-      logo: "https://images.unsplash.com/photo-1634128222187-5ec54a4b6df3?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+      logo: "https://images.unsplash.com/photo-1560472355-536de3962603?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
       description: "Venture capital"
     },
     {
