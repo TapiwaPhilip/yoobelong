@@ -15,7 +15,7 @@ const AboutUsGallery = () => {
       alt: "Group of seniors hiking in nature"
     },
     {
-      url: "https://images.unsplash.com/photo-1569844501545-06a89a9bbbdd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      url: "https://images.unsplash.com/photo-1524863479829-916d8e77f114?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       alt: "Seniors enjoying a dance class"
     },
     {
@@ -23,8 +23,8 @@ const AboutUsGallery = () => {
       alt: "Older couple laughing on a beach"
     },
     {
-      url: "https://images.unsplash.com/photo-1588873281593-1db8f8267a55?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-      alt: "Group of seniors doing yoga outdoors"
+      url: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      alt: "Group of seniors doing fitness activities"
     }
   ];
 
