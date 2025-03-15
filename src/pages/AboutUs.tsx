@@ -18,7 +18,7 @@ const AboutUs = () => {
       <PageSEO 
         title="About YOOBELONG - Our Mission and Values"
         description="Learn about YOOBELONG's mission to transform senior living in Germany. Meet our founding team and discover the vision behind our innovative communities."
-        keywords="YOOBELONG mission, senior living innovation, founding team, about us, company history"
+        keywords="YOOBELONG mission, senior living innovation, founding team, about us, company history, press coverage"
         canonicalUrl="https://www.yoobelong.com/about"
       />
       <Header />

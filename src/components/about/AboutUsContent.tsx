@@ -6,6 +6,7 @@ import AboutUsVision from "./AboutUsVision";
 import AboutUsGallery from "./AboutUsGallery";
 import AboutUsCTA from "./AboutUsCTA";
 import AboutUsInvestors from "./AboutUsInvestors";
+import PressMentions from "@/components/PressMentions";
 
 const AboutUsContent = () => {
   return (
@@ -15,6 +16,7 @@ const AboutUsContent = () => {
       <AboutUsFeatures />
       <AboutUsVision />
       <AboutUsInvestors />
+      <PressMentions />
       <AboutUsGallery />
       <AboutUsCTA />
     </>
